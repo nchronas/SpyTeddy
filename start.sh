@@ -9,5 +9,5 @@ echo "root:$PASSWD" | chpasswd
 dropbear -E -F-s &
 
 #start your application from here...
-python /app/server.py
+python /app/demo.py
 

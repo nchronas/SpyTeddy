@@ -30,4 +30,5 @@ RUN pip install picamera
 # add the root dir to the /app dir in the container env
 COPY . /app
 
-CMD modprobe bcm2835-v4l2 && ["bash", "/app/start.sh"]
+CMD modprobe bcm2835-v4l2
+CMD ["bash", "/app/start.sh"]

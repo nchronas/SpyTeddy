@@ -27,7 +27,6 @@ libgstreamer-plugins-base1.0-dev \
 # Install picamera python module using pip
 RUN pip install picamera
 
-
 # add the root dir to the /app dir in the container env
 COPY . /app
 

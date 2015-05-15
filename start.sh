@@ -11,3 +11,5 @@ dropbear -E -F-s &
 #start your application from here...
 python /app/demo.py
 
+sleep 9999999999999
+

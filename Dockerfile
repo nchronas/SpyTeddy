@@ -8,6 +8,7 @@ python-pip \
 dropbear \
 nano \
 git autoconf automake libtool gtk-doc-tools libglib2.0-dev \
+libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
 && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install picamera python module using pip

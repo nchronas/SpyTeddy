@@ -4,7 +4,7 @@ RUN echo "deb http://vontaene.de/raspbian-updates/ . main" >> /etc/apt/sources.l
 
 
 # Install Python, pip and the camera module firmware
-RUN apt-get update && apt-get install -y python \
+RUN apt-get update && apt-get install -y --force-yes python \
 python-dev \
 libraspberrypi-bin \
 python-pip \

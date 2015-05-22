@@ -10,6 +10,7 @@ libraspberrypi-bin \
 python-pip \
 dropbear \
 nano \
+git\
 libgstreamer1.0-0 libgstreamer1.0-0-dbg libgstreamer1.0-dev \
 liborc-0.4-0 liborc-0.4-0-dbg liborc-0.4-dev liborc-0.4-doc \
 gir1.2-gst-plugins-base-1.0 gir1.2-gstreamer-1.0 \
@@ -26,6 +27,12 @@ libgstreamer-plugins-base1.0-dev \
 
 # Install picamera python module using pip
 RUN pip install picamera
+
+RUN git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg && \
+cd ffmpeg && \
+./configure && \
+make && \
+make install \
 
 # add the root dir to the /app dir in the container env
 COPY . /app

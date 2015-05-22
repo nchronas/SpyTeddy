@@ -30,7 +30,7 @@ libgstreamer-plugins-base1.0-dev \
 && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install picamera python module using pip
-RUN pip install picamera
+RUN pip install picamera pyconnman
 
 # add the root dir to the /app dir in the container env
 COPY . /app

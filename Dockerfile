@@ -30,8 +30,7 @@ libgstreamer-plugins-base1.0-dev \
 # Install picamera python module using pip
 RUN pip install picamera
 
-RUN git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg && \
-cd ffmpeg && \
+RUN cd ffmpeg && \
 ./configure && \
 make && \
 make install \

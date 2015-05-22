@@ -40,7 +40,7 @@ tar xvf ffmpeg-snapshot.tar.bz2 && \
 cd ffmpeg && \
 ./configure && \
 make && \
-make install \
+make install
 
 
 CMD modprobe bcm2835-v4l2

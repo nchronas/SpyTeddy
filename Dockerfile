@@ -33,7 +33,7 @@ RUN pip install picamera
 # add the root dir to the /app dir in the container env
 COPY . /app
 
-RUN cd ffmpeg && \
+RUN cd /app/ffmpeg && \
 ./configure && \
 make && \
 make install \

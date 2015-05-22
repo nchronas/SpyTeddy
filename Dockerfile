@@ -1,5 +1,7 @@
 FROM resin/rpi-raspbian:jessie
 
+ENV INITSYSTEM on
+
 RUN echo "deb http://vontaene.de/raspbian-updates/ . main" >> /etc/apt/sources.list
 
 
@@ -10,7 +12,7 @@ libraspberrypi-bin \
 python-pip \
 dropbear \
 nano \
-git\
+git \
 libgstreamer1.0-0 libgstreamer1.0-0-dbg libgstreamer1.0-dev \
 liborc-0.4-0 liborc-0.4-0-dbg liborc-0.4-dev liborc-0.4-doc \
 gir1.2-gst-plugins-base-1.0 gir1.2-gstreamer-1.0 \

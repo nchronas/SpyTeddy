@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y --force-yes python \
 python-dev \
 libraspberrypi-bin \
 python-pip \
+python-dbus \
 dropbear \
 nano \
 git \

@@ -15,6 +15,8 @@ nano \
 git \
 wget \
 tar \
+libjpeg8-dev \
+imagemagick \
 libgstreamer1.0-0 libgstreamer1.0-0-dbg libgstreamer1.0-dev \
 liborc-0.4-0 liborc-0.4-0-dbg liborc-0.4-dev liborc-0.4-doc \
 gir1.2-gst-plugins-base-1.0 gir1.2-gstreamer-1.0 \
@@ -35,12 +37,12 @@ RUN pip install picamera pyconnman
 # add the root dir to the /app dir in the container env
 COPY . /app
 
-RUN wget https://www.ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 && \
-tar xvf ffmpeg-snapshot.tar.bz2 && \
-cd ffmpeg && \
-./configure && \
-make && \
-make install
+#RUN wget https://www.ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 && \
+#tar xvf ffmpeg-snapshot.tar.bz2 && \
+#cd ffmpeg && \
+#./configure && \
+#make && \
+#make install
 
 
 CMD modprobe bcm2835-v4l2

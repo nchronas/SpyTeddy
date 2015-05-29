@@ -16,6 +16,7 @@ nano \
 git \
 wget \
 tar \
+usbutils \
 libjpeg8-dev \
 imagemagick \
 subversion \

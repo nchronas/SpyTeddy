@@ -1,0 +1,70 @@
+$def with (wireless_networks)
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>WiFi Credentials</title>
+	<style type="text/css">
+		body {
+		    font-size: 67%;
+		}
+
+		body, form, select {
+		    font-family: "Tahoma", "Geneva", sans-serif;
+		}
+
+		fieldset {
+		    border: 0;
+		}
+
+		label {
+		    display: block;
+		    margin: 0 0 10px 0;
+		}
+
+		label > span {
+		    width: 138px;
+		    display: inline-block;
+		}
+
+		select, input {
+		    display: inline-block;
+		    width: 140px;
+		    padding: 5px;
+		    margin: 0;
+		}
+
+		select {
+		    width: 152px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<form method="post" action="">
+		<fieldset>
+			<legend><h1>Enter your WiFi passphrase</h1></legend>
+
+			<label>
+				<span>Select your WiFi SSID</span>
+				<select name="path">
+					$for path in wireless_networks:
+						<option value="$path">$wireless_networks[path]</option>
+				</select>
+			</label>
+
+			<label>
+				<span>Enter your WiFi Passphrase</span>
+				<input type="text" name="psk" />
+			</label>
+
+			<label><span></span>
+				<button>Save</button>
+			</label>
+		</fieldset>
+	</form>
+
+</body>
+</html>

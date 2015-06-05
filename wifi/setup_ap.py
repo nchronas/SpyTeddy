@@ -48,7 +48,7 @@ try:
 	#sleep 10
 	time.sleep(10)
 
-	subprocess.call(['/app/setup-iptables.sh', 'ADD', '8080'])
+	subprocess.call(['/app/wifi/setup-iptables.sh', 'ADD', '8080'])
 
 	print '* done starting AP'
 

@@ -10,7 +10,7 @@ urls = (
 
 app = web.application(urls, globals())
 
-render = web.template.render('/app/templates/')
+render = web.template.render('/app/wifi/templates/')
 
 wireless_networks = pickle.load(open( '/data/ssids.p', 'rb' ))
 
@@ -26,7 +26,7 @@ class index:
 
 		p = subprocess.Popen(
 						['python',
-						'/app/connect.py',
+						'/app/wifi/connect.py',
 						str(data.path),
 						str(data.psk)])
 		p.wait()
@@ -37,7 +37,7 @@ class index:
 			app.stop()
 		else:
 			#connection failed, we should restart the AP
-			subprocess.call(['python', '/app/setup_ap.py'])
+			subprocess.call(['python', '/app/wifi/setup_ap.py'])
 
 		return render.index(wireless_networks = wireless_networks)
 

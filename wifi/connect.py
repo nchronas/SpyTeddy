@@ -57,7 +57,7 @@ if __name__ == '__main__':
 		tech = pyconnman.ConnTechnology('/net/connman/technology/wifi')
 
 		print '* clean iptables'
-		subprocess.call(['/app/setup-iptables.sh', 'R'])
+		subprocess.call(['/app/wifi/setup-iptables.sh', 'R'])
 
 		tethering = tech.get_property('Tethering')
 		print '* currently tethering? ', tethering

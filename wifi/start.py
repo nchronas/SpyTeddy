@@ -13,7 +13,7 @@ server_started = False
 
 def start_server():
 	print '* starting web server'
-	p = subprocess.Popen(['python', '/app/server.py'])
+	p = subprocess.Popen(['python', '/app/wifi/server.py'])
 
 
 #ConnManager.SIGNAL_SERVICES_CHANGED event handler
@@ -56,7 +56,7 @@ def get_services():
 		if server_started == False:
 		 	#need wifi credentials
 		 	#start AP
-		 	subprocess.call(['python', '/app/setup_ap.py'])
+		 	subprocess.call(['python', '/app/wifi/setup_ap.py'])
 
 			server_started = True
 			start_server()
@@ -73,7 +73,7 @@ def try_connect():
 
 		pconnect = subprocess.Popen(
 							['python',
-							'/app/connect.py',
+							'/app/wifi/connect.py',
 							str(wifi_creds['path']),
 							str(wifi_creds['psk'])])
 
